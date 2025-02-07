@@ -1,7 +1,5 @@
 using Xunit;
-using Assigment3Dotnet;
 using Assignment3Dotnet;
-
 
 namespace StringCompressionTest
 {
@@ -32,6 +30,27 @@ namespace StringCompressionTest
         {
             Assert.Equal("abcd", _compressor.Compress("abcd"));
         }
+
+        
+        [Fact]
+        public void Compress_LongRepeatingCharacters_CompressesCorrectly()
+        {
+            Assert.Equal("a10b2", _compressor.Compress("aaaaaaaaaabb"));
+        }
+
+       
+        [Fact]
+        public void Decompress_CompressedString_ReturnsOriginalString()
+        {
+            Assert.Equal("aabcccccaaa", _compressor.Decompress("a2b1c5a3"));
+        }
+
+        [Fact]
+        public void Decompress_LongRepeatingCharacters_ReturnsOriginalString()
+        {
+            Assert.Equal("aaaaaaaaaabb", _compressor.Decompress("a10b2"));
+        }
     }
 }
+
 
