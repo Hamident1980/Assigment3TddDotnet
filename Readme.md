@@ -42,4 +42,4 @@ Submit via github name the repo as *YourName_Assignment3*
 ### Bonus:
 
 - Handle cases with more than 9 consecutive characters.
-- Implement a decompression method to decompress the compressed string back to its original form.
+- Implement a decompression method to decompress the compressed string back to its original form.// Trigger GitHub Actions
